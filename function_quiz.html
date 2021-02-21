@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>quiz page</title>
+
+<script type="text/javascript" src="jtime.js"></script>
+</head>
+<body>
+	<form name="myform">
+		Q1.html stands for?<br>
+		<input type="radio" name="rd" value="a">hypertext markup language</br>
+		<input type="radio" name="rd" value="b">hypertext markup technology</br></br>
+
+		Q2.Is javascript case-sensitivie language?<br>
+		<input type="radio" name="rd1" value="a">true</br>
+		<input type="radio" name="rd1" value="b">false</br></br>
+
+		<input type="button" value="submit" onclick="check()">
+	</form>
+<script>
+	function check()
+	{
+		var rd=document.myform.rd.value;
+		var rd1=document.myform.rd1.value;
+		var count=0;
+		if(rd=="a")
+		{
+		count++;
+		}
+		if(rd1=="a")
+		{
+		count++;
+		}
+		alert("you got "+count+" points");
+	}
+</script>
+</body>
+</html>

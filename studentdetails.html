@@ -1,0 +1,70 @@
+<html>
+<head>
+<title>Student information </title>
+ <script>  
+	 function calc()
+    	{
+	 	form=document.getElementById("form1");
+       		sub1=form.sub1.value;
+       		sub2=form.sub2.value;
+       		sub3=form.sub3.value;
+       		sub4=form.sub4.value;
+    		total=parseInt(sub1)+parseInt(sub2)+parseInt(sub3)+parseInt(sub4);
+       		form.total.value= total; 
+       		form.avg.value= parseInt(total)/4; 
+      	 	if(sub1<35||sub2<35||sub3<35||sub4<35)
+       		{
+			 form.result.value="Fail";
+		}
+     		 else 	
+		{
+			form.result.value="Pass";
+		}
+      
+      		 if(form.avg.value>90)
+        		{
+			form.grade.value="A";
+		}
+       		else if (form.avg.value>80 && form.avg.value<90)
+       		{
+			form.grade.value="B";
+		}
+       		else if (form.avg.value>70 && form.avg.value<80)
+        		{
+			form.grade.value="C";
+		}
+       		else if (form.avg.value>60 && form.avg.value<70)
+       		{
+			form.grade.value="D";
+		}
+       		else if (form.avg.value>=35 && form.avg.value<60)
+        		{
+			form.grade.value="E";
+		}
+    	}
+</script>
+</head>
+<body>
+	<form id="form1">
+		 Student information.<br /><br />
+
+		  Enter the Name :  <input type="text" size="20" name="name"/><br />
+   
+  		Marks in sub1 :  <input type="text" size="20" name="sub1"/><br />
+
+ 		 Marks in sub2 :  <input type="text" size="20" name="sub2"/><br />
+
+  		Marks in sub3 :  <input type="text" size="20" name="sub3"/><br />
+
+  		Marks in sub4 :  <input type="text" size="20" name="sub4"/><br />
+
+ 
+  		<input type="button" name="btn" value="Calculate" onclick="calc()"/><br />
+  		Total : <input type="text" size="20" name="total"/><br />
+  		Average : <input type="text" size="20" name="avg"/><br />
+  		Result : <input type="text" size="20" name="result"/><br />
+  		Grade : <input type="text" size="20" name="grade"/><br />
+  		<input type="reset" name="Btn2" value="Reset"/>
+	</form>
+</body>
+</html>
